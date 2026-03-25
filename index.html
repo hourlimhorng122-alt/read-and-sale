@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookWorm | Read & Buy Books Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/css.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-book-open"></i>
+                    <span>Book<span class="logo-highlight">Worm</span></span>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search books, authors, genres...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+                    <a href="#library"><i class="fas fa-book"></i> Library</a>
+                    <a href="#bookstore"><i class="fas fa-store"></i> Bookstore</a>
+                    <a href="#reading"><i class="fas fa-glasses"></i> Reading</a>
+                    <a href="#wishlist"><i class="fas fa-heart"></i> <span class="badge">3</span></a>
+                    <a href="#cart"><i class="fas fa-shopping-cart"></i> <span class="badge">2</span></a>
+                    
+                    <div class="user-menu">
+                        <img src="https://i.pravatar.cc/40" alt="User" class="user-avatar">
+                        <div class="user-dropdown">
+                            <a href="#profile"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="#mybooks"><i class="fas fa-books"></i> My Books</a>
+                            <a href="#readinglist"><i class="fas fa-bookmark"></i> Reading List</a>
+                            <a href="#purchases"><i class="fas fa-receipt"></i> Purchases</a>
+                            <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Discover Your Next Favorite Book</h1>
+                <p>Read online or purchase physical copies. Millions of books at your fingertips.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Start Reading Free</button>
+                    <button class="btn-secondary">Browse Store</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Books">
+            </div>
+        </section>
+
+        <!-- Featured Books Slider -->
+        <section class="featured-section">
+            <h2 class="section-title">Featured Books</h2>
+            <div class="swiper featured-slider">
+                <div class="swiper-wrapper">
+                    <!-- Book 1 -->
+                    <div class="swiper-slide book-card featured">
+                        <div class="book-cover">
+                            <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Book Cover">
+                            <div class="book-badge">Bestseller</div>
+                            <button class="book-quick-view"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">The Silent Echo</h3>
+                            <p class="book-author">By Sarah Johnson</p>
+                            <div class="book-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-score">4.5</span>
+                            </div>
+                            <div class="book-actions">
+                                <button class="btn-read"><i class="fas fa-book-open"></i> Read Sample</button>
+                                <button class="btn-buy" data-price="24.99">$24.99</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book 2 -->
+                    <div class="swiper-slide book-card featured">
+                        <div class="book-cover">
+                            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Book Cover">
+                            <div class="book-badge">New Release</div>
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">Digital Dreams</h3>
+                            <p class="book-author">By Michael Chen</p>
+                            <div class="book-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-score">4.0</span>
+                            </div>
+                            <div class="book-actions">
+                                <button class="btn-read"><i class="fas fa-book-open"></i> Read Sample</button>
+                                <button class="btn-buy" data-price="19.99">$19.99</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more books as needed -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!-- Reading & Store Sections -->
+        <div class="content-grid">
+            <!-- Left Column - Reading Features -->
+            <div class="left-column">
+                <!-- Currently Reading -->
+                <section class="card reading-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-book-reader"></i> Currently Reading</h2>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="currently-reading">
+                        <div class="reading-book">
+                            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Book">
+                            <div class="reading-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                                <span class="progress-text">65% complete</span>
+                            </div>
+                            <div class="reading-controls">
+                                <button class="btn-play"><i class="fas fa-play"></i> Continue</button>
+                                <button class="btn-bookmark"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reader Interface -->
+                <section class="card reader-section" id="reading">
+                    <h2><i class="fas fa-glasses"></i> E-Reader</h2>
+                    <div class="reader-toolbar">
+                        <button class="reader-btn"><i class="fas fa-minus"></i></button>
+                        <span class="font-size">Font Size: 16px</span>
+                        <button class="reader-btn"><i class="fas fa-plus"></i></button>
+                        <select class="theme-select">
+                            <option value="light">Light</option>
+                            <option value="sepia">Sepia</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                        <button class="reader-btn"><i class="fas fa-bookmark"></i></button>
+                    </div>
+                    <div class="reader-content">
+                        <div class="reader-page">
+                            <h3>Chapter 1: The Beginning</h3>
+                            <p>It was a dark and stormy night. The rain fell in torrents, and the wind howled through the ancient trees surrounding the old mansion. Inside, by the flickering light of a single candle, Eleanor opened the mysterious book that had arrived that morning.</p>
+                            <p>The pages were yellowed with age, and the ink had faded to a rusty brown. As she traced her finger over the strange symbols, she felt a chill run down her spine. This was no ordinary book.</p>
+                        </div>
+                    </div>
+                    <div class="reader-navigation">
+                        <button class="btn-prev"><i class="fas fa-chevron-left"></i> Previous</button>
+                        <div class="page-info">Page 1 of 352</div>
+                        <button class="btn-next">Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column - Book Store -->
+            <div class="right-column">
+                <!-- Book Store -->
+                <section class="card store-section" id="bookstore">
+                    <div class="section-header">
+                        <h2><i class="fas fa-store"></i> Book Store</h2>
+                        <div class="store-filters">
+                            <select class="filter-select">
+                                <option>All Genres</option>
+                                <option>Fiction</option>
+                                <option>Non-Fiction</option>
+                                <option>Science Fiction</option>
+                                <option>Mystery</option>
+                                <option>Romance</option>
+                            </select>
+                            <select class="sort-select">
+                                <option>Sort by: Popular</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Newest</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="books-grid">
+                        <!-- Book Item 1 -->
+                        <div class="book-item">
+                            <div class="book-item-cover">
+                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Book">
+                                <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="book-item-info">
+                                <h4>The Lost City</h4>
+                                <p class="author">James Wilson</p>
+                                <div class="price">$29.99 <span class="original-price">$39.99</span></div>
+                                <div class="stock-status in-stock">In Stock</div>
+                                <button class="btn-add-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Book Item 2 -->
+                        <div class="book-item">
+                            <div class="book-item-cover">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Book">
+                                <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="book-item-info">
+                                <h4>Quantum Leaps</h4>
+                                <p class="author">Dr. Lisa Park</p>
+                                <div class="price">$34.99</div>
+                                <div class="stock-status limited">Limited Stock</div>
+                                <button class="btn-add-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Add more book items -->
+                    </div>
+                    
+                    <div class="store-actions">
+                        <button class="btn-load-more">Load More Books</button>
+                    </div>
+                </section>
+
+                <!-- Shopping Cart -->
+                <section class="card cart-section" id="cart">
+                    <h2><i class="fas fa-shopping-cart"></i> Shopping Cart</h2>
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w-100&q=80" alt="Book">
+                            <div class="cart-item-details">
+                                <h4>The Lost City</h4>
+                                <p class="author">James Wilson</p>
+                                <div class="cart-item-price">$29.99</div>
+                            </div>
+                            <div class="cart-item-controls">
+                                <button class="btn-quantity minus">-</button>
+                                <span class="quantity">1</span>
+                                <button class="btn-quantity plus">+</button>
+                                <button class="btn-remove"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-item">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Book">
+                            <div class="cart-item-details">
+                                <h4>Quantum Leaps</h4>
+                                <p class="author">Dr. Lisa Park</p>
+                                <div class="cart-item-price">$34.99</div>
+                            </div>
+                            <div class="cart-item-controls">
+                                <button class="btn-quantity minus">-</button>
+                                <span class="quantity">1</span>
+                                <button class="btn-quantity plus">+</button>
+                                <button class="btn-remove"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>$64.98</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span>$5.99</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>$70.97</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-checkout">Proceed to Checkout</button>
+                </section>
+            </div>
+        </div>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <h2 class="section-title">Browse by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card fiction">
+                    <i class="fas fa-dragon"></i>
+                    <h3>Fiction</h3>
+                    <p>1,234 Books</p>
+                </div>
+                <div class="category-card scifi">
+                    <i class="fas fa-robot"></i>
+                    <h3>Sci-Fi</h3>
+                    <p>876 Books</p>
+                </div>
+                <div class="category-card mystery">
+                    <i class="fas fa-search"></i>
+                    <h3>Mystery</h3>
+                    <p>543 Books</p>
+                </div>
+                <div class="category-card romance">
+                    <i class="fas fa-heart"></i>
+                    <h3>Romance</h3>
+                    <p>987 Books</p>
+                </div>
+                <div class="category-card biography">
+                    <i class="fas fa-user"></i>
+                    <h3>Biography</h3>
+                    <p>432 Books</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BookWorm</h3>
+                <p>Your digital library and bookstore in one place. Read, discover, and purchase books online.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-goodreads"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#library">My Library</a></li>
+                    <li><a href="#bookstore">Book Store</a></li>
+                    <li><a href="#reading">Reading Room</a></li>
+                    <li><a href="#bestsellers">Bestsellers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#help">Help Center</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#shipping">Shipping Info</a></li>
+                    <li><a href="#returns">Returns</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe for book recommendations and deals</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 BookWorm. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#cookies">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="bookModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-book-details">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/js/js.js"></script>
+</body>
+</html>
